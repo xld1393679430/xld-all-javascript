@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 弹跳小球效果</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            background-color: #e599f7;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            left: 50%;
+            top: 50%;
+            display: inline-block;
+            transform: translate(-50%, -50%);
+        }
+
+        .ball {
+            width: 50px;
+            border-top: 25px solid #3b5bdb;
+            border-bottom: 25px solid #be4bdb;
+            border-radius: 50%;
+            animation: animateBall 1s infinite linear;
+        }
+
+        .shadow {
+            position: absolute;
+            bottom: -25%;
+            width: 50px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #6643b0;
+            opacity: 0.8;
+            animation: animateShadow 1s infinite linear;
+        }
+
+        @keyframes animateBall {
+            0% {
+                transform: translateY(0) rotate(0);
+            }
+
+            50% {
+                transform: translateY(-160px) rotate(180deg);
+            }
+
+            100% {
+                transform: translateY(0) rotate(360deg);
+            }
+        }
+
+        @keyframes animateShadow {
+            0% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+
+            50% {
+                transform: scale(0.4);
+                opacity: 0.4;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        <div class="ball"></div>
+        <div class="shadow"></div>
+    </section>
+</body>
+
+</html>

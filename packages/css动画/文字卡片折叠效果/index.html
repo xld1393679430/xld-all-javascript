@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 文字卡片折叠效果</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            background-color: #ff90b3;
+        }
+
+        .text {
+            display: flex;
+            justify-content: center;
+            margin: 250px auto 100px;
+            text-align: center;
+            transition: 0.5s;
+        }
+
+        .text span {
+            font-size: 30px;
+            background-color: #fff;
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
+            color: #a0a0a0;
+            font-family: Arial, Helvetica, sans-serif;
+            transition: 0.5s;
+        }
+
+        .text:hover span:nth-child(odd) {
+            transform: skewY(-14deg);
+            color: #b5b5b5;
+            box-shadow: 0 60px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .text:hover span:nth-child(even) {
+            transform: skewY(14deg);
+            color: #b5b5b5;
+            box-shadow: 0 60px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="text">
+        <span>C</span>
+        <span>S</span>
+        <span>S</span>
+        <span>3</span>
+        <span>文</span>
+        <span>字</span>
+        <span>卡</span>
+        <span>片</span>
+        <span>折</span>
+        <span>叠</span>
+        <span>效</span>
+        <span>果</span>
+    </section>
+    <h1>CSS3 文字卡片折叠效果(hover时出现)</h1>
+</body>
+
+</html>
